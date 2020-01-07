@@ -237,7 +237,7 @@ function spawn_minion(p: player, loc: location, type: text):
 	set metadata value "MINION_OWNER" of {_stand} to {_uuid}
 	set metadata value "MINION_TYPE" of {_stand} to {_type}
 	{_stand}.setSmall(true)
-#	{_stand}.setGravity(false)
+	{_stand}.setGravity(false)
 	{_stand}.setCustomNameVisible(true)
 	set {_name} to yaml value "settings.%{_type}%.name" from "leaf.minions.config"
 	replace all "{player}" with "%{_p}%" in {_name}
